@@ -13,3 +13,13 @@ console.log(notes[5]);
 console.log(notes.length);
 
 notes.unshift("z");
+
+if (notes.includes("C")) {
+  console.log("yeah its here");
+} else {
+  console.log("not here");
+}
+
+if (notes.indexOf("Bmaj7") === -1) {
+  console.log("that isn't included");
+}
