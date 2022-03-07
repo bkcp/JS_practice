@@ -23,3 +23,4 @@ if (notes.includes("C")) {
 if (notes.indexOf("Bmaj7") === -1) {
   console.log("that isn't included");
 }
+console.log(notes);
