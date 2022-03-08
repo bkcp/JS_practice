@@ -24,3 +24,15 @@ if (notes.indexOf("Bmaj7") === -1) {
   console.log("that isn't included");
 }
 console.log(notes);
+
+const kitchenSink = {
+  favNum: 90,
+  isFunny: true,
+  colors: ["red", "orange"],
+  name: "billy",
+};
+
+let objectData = kitchenSink["colors"] + kitchenSink["name"];
+console.log(kitchenSink.favNum);
+console.log(kitchenSink["isFunny"]);
+console.log(objectData);
