@@ -37,6 +37,6 @@ console.log(kitchenSink.favNum);
 console.log(kitchenSink["isFunny"]);
 console.log(objectData);
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 0; i <= 10; i += 2) {
   console.log(i);
 }
