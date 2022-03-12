@@ -36,3 +36,7 @@ let objectData = kitchenSink["colors"] + kitchenSink["name"];
 console.log(kitchenSink.favNum);
 console.log(kitchenSink["isFunny"]);
 console.log(objectData);
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i);
+}
