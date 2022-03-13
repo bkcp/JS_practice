@@ -57,3 +57,38 @@ const people = ["Scooby", "Velma", "Daphne", "Shaggy", "Fred"]; //DONT TOUCH THI
 for (let i = 0; i < people.length; i++) {
   console.log(people[i].toUpperCase());
 }
+for (let i = 1; i < 10; i++) {
+  console.log(`i is: ${i}`);
+  for (let j = 1; j < 4; j++) {
+    console.log(`   j is: ${j}`);
+  }
+}
+
+const seatingChart = [
+  ["bill", "biv", "devo"],
+  ["jim", "jay", "jack"],
+  ["tom", "tim", "tina"],
+];
+
+for (let i = 0; i < seatingChart.length; i++) {
+  let row = seatingChart[i];
+  console.log(`Row #${i + 1}`);
+  for (let j = 0; j < row.length; j++) {
+    console.log(row[j]);
+  }
+}
+
+const arp = [
+  [1, 3, 5, 7],
+  [2, 4, 6, 8],
+  [3, 5, 7, 2],
+  [4, 6, 8, 3],
+];
+
+for (let i = 0; i < arp.length; i++) {
+  let chordDegree = arp[i];
+  console.log(`7th Chord from degree ${i + 1}`);
+  for (let j = 0; j < chordDegree.length; j++) {
+    console.log(chordDegree[j]);
+  }
+}
