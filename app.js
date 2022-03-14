@@ -106,3 +106,18 @@ for (let i = 0; i < colors.length; i++) {
     console.log(hue[j]);
   }
 }
+
+let count = 0;
+while (count < 10) {
+  count++;
+  console.log(count);
+}
+
+const SECRET = "BabyHippo";
+
+let guess = prompt("enter secret code");
+
+while (guess !== SECRET) {
+  guess = prompt("enter secret code!..");
+}
+console.log("congrats");
