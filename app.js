@@ -115,9 +115,9 @@ while (count < 10) {
 
 const SECRET = "BabyHippo";
 
-let guess = prompt("enter secret code");
+// let guess = prompt("enter secret code");
 
-while (guess !== SECRET) {
-  guess = prompt("enter secret code!..");
-}
+// while (guess !== SECRET) {
+//   guess = prompt("enter secret code!..");
+// }
 console.log("congrats");
