@@ -92,3 +92,17 @@ for (let i = 0; i < arp.length; i++) {
     console.log(chordDegree[j]);
   }
 }
+
+let colors = [
+  ["red", "yellow", "orange"],
+  ["blue", "green", "purple"],
+  ["neon", "earth", "translucent"],
+];
+
+for (let i = 0; i < colors.length; i++) {
+  let hue = colors[i];
+  console.log(`Hue set: ${i + 1}`);
+  for (let j = 0; j < hue.length; j++) {
+    console.log(hue[j]);
+  }
+}
