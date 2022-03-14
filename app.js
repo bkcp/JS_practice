@@ -131,27 +131,27 @@ console.log("congrats");
 // }
 // console.log("Ok you win");
 
-let maximum = parseInt(prompt("enter max number"));
-while (!maximum) {
-  maximum = parseInt(prompt("a NUMBER dumbass"));
-}
+// let maximum = parseInt(prompt("enter max number"));
+// while (!maximum) {
+//   maximum = parseInt(prompt("a NUMBER dumbass"));
+// }
 
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-console.log(targetNum);
+// const targetNum = Math.floor(Math.random() * maximum) + 1;
+// console.log(targetNum);
 
-let guess = parseInt(prompt("enter a guess"));
-let attempts = 1;
-while (parseInt(guess) !== targetNum) {
-  if (guess === "q") break;
-  attempts++;
-  if (guess > targetNum) {
-    guess = prompt("too high");
-  } else {
-    guess = prompt("too low");
-  }
-}
-if (guess === "q") {
-  console.log("ok fine quit.");
-} else {
-  console.log(`Nice! it took ${attempts} attempts`);
-}
+// let guess = parseInt(prompt("enter a guess"));
+// let attempts = 1;
+// while (parseInt(guess) !== targetNum) {
+//   if (guess === "q") break;
+//   attempts++;
+//   if (guess > targetNum) {
+//     guess = prompt("too high");
+//   } else {
+//     guess = prompt("too low");
+//   }
+// }
+// if (guess === "q") {
+//   console.log("ok fine quit.");
+// } else {
+//   console.log(`Nice! it took ${attempts} attempts`);
+// }
