@@ -183,3 +183,46 @@ for (let row of seating) {
 for (let char of "hello world") {
   console.log(char);
 }
+
+const testScores = {
+  keenan: 80,
+  damon: 67,
+  kim: 89,
+  shawn: 91,
+  marlon: 72,
+  dwayne: 78,
+  nadia: 83,
+  elvira: 97,
+  diedre: 81,
+  vonnie: 60,
+};
+
+for (let person in testScores) {
+  console.log(`${person} scored ${testScores[person]}`);
+}
+
+let total = 0;
+let scores = Object.values(testScores);
+
+for (let points of scores) {
+  total += points;
+}
+console.log(`Class average is ${total / scores.length}`);
+
+const toyCost = {
+  heman: 8,
+  donatello: 5,
+  skelator: 8,
+  michaelangelo: 12,
+  splinter: 20,
+  shredder: 34,
+  battlecat: 23,
+};
+
+let cost = Object.values(toyCost);
+let totals = 0;
+
+for (let prices of cost) {
+  totals += prices;
+}
+console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
