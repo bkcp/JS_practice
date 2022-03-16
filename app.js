@@ -155,3 +155,31 @@ console.log("congrats");
 // } else {
 //   console.log(`Nice! it took ${attempts} attempts`);
 // }
+
+const subreddits = ["cringe", "books", "chickens", "funny", "pics", "soccer"];
+
+for (let i = 0; i < subreddits.length; i++) {
+  console.log(`Visit reddit.com/${subreddits[i]}`);
+}
+
+for (let subs of subreddits) {
+  console.log(subs);
+}
+
+const seating = [
+  ["bill", "biv", "devo"],
+  ["jim", "jay", "jack"],
+  ["tom", "tim", "tina"],
+];
+let rowNumber = 0;
+for (let row of seating) {
+  rowNumber++;
+  console.log(`Row # ${rowNumber}`);
+  for (let student of row) {
+    console.log(student);
+  }
+}
+
+for (let char of "hello world") {
+  console.log(char);
+}
