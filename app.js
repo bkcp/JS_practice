@@ -248,7 +248,7 @@ console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
   keywords: 
  new
  list
- delet
+ delete
  quit
 
  anything else returns prompt"wtf? idk what you want..'
@@ -259,3 +259,34 @@ console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
  -if input is list, iterate over array and console log. 
  - use splice to delete. 
  */
+
+let todoList = [];
+let input;
+while (input !== "quit") {
+  input = prompt("what would you like to do?");
+  if (input === "quit") {
+    break;
+  } else if (input === "new") {
+    const newToDo = prompt("Enter new todo");
+    todoList.push(newToDo);
+    console.log(`Added ${newToDo} to list`);
+  } else if (input === "list") {
+    console.log("*****");
+    for (let i = 0; i < todoList.length; i++) {
+      console.log(`${i}: ${todoList[i]}`);
+    }
+    console.log("*****");
+  } else if (input === "delete") {
+    const index = parseInt(prompt("select the index you want to delete"));
+    if (!Number.isNaN(index)) {
+      const deleted = todoList.splice(index, 1);
+      console.log(`Ok, deleted ${deleted}`);
+    } else {
+      console.log("unknown index");
+    }
+  }
+
+  // if (input !== "new" || "list" || "delete") {
+  //   input = prompt("wtf? you wanna do what now?");
+  // }
+}
