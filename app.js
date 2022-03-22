@@ -226,3 +226,36 @@ for (let prices of cost) {
   totals += prices;
 }
 console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
+
+/*TODO APP
+  -prompt "What would you like to do"
+  -type "new"
+  -prompt "Enter new to do"
+  - type '*something to do*'
+  -add new to do item to list
+  -console.log "item added to list"
+  -return to prompt "What would you like to do?"
+  -type "list"
+  - console.log asterisks > array list including index > asterisks
+  -return to prompt "What would you like to do?"
+  -type 'delete'
+  -prompt "enter index of item to delete"
+  - type the index 
+  -return to prompt "What would you like to do?"
+  -type "quit"
+  -quit app
+
+  keywords: 
+ new
+ list
+ delet
+ quit
+
+ anything else returns prompt"wtf? idk what you want..'
+
+ -USE a while loop, while it isnt "quit", keep looping.
+ -Store the list in an array, 
+ -if input = "new" input gets pushed to array.
+ -if input is list, iterate over array and console log. 
+ - use splice to delete. 
+ */
