@@ -227,66 +227,66 @@ for (let prices of cost) {
 }
 console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
 
-/*TODO APP
-  -prompt "What would you like to do"
-  -type "new"
-  -prompt "Enter new to do"
-  - type '*something to do*'
-  -add new to do item to list
-  -console.log "item added to list"
-  -return to prompt "What would you like to do?"
-  -type "list"
-  - console.log asterisks > array list including index > asterisks
-  -return to prompt "What would you like to do?"
-  -type 'delete'
-  -prompt "enter index of item to delete"
-  - type the index 
-  -return to prompt "What would you like to do?"
-  -type "quit"
-  -quit app
+// /*TODO APP
+//   -prompt "What would you like to do"
+//   -type "new"
+//   -prompt "Enter new to do"
+//   - type '*something to do*'
+//   -add new to do item to list
+//   -console.log "item added to list"
+//   -return to prompt "What would you like to do?"
+//   -type "list"
+//   - console.log asterisks > array list including index > asterisks
+//   -return to prompt "What would you like to do?"
+//   -type 'delete'
+//   -prompt "enter index of item to delete"
+//   - type the index
+//   -return to prompt "What would you like to do?"
+//   -type "quit"
+//   -quit app
 
-  keywords: 
- new
- list
- delete
- quit
+//   keywords:
+//  new
+//  list
+//  delete
+//  quit
 
- anything else returns prompt"wtf? idk what you want..'
+//  anything else returns prompt"wtf? idk what you want..'
 
- -USE a while loop, while it isnt "quit", keep looping.
- -Store the list in an array, 
- -if input = "new" input gets pushed to array.
- -if input is list, iterate over array and console log. 
- - use splice to delete. 
- */
+//  -USE a while loop, while it isnt "quit", keep looping.
+//  -Store the list in an array,
+//  -if input = "new" input gets pushed to array.
+//  -if input is list, iterate over array and console log.
+//  - use splice to delete.
+//  */
 
-let todoList = [];
-let input;
-while (input !== "quit") {
-  input = prompt("what would you like to do?");
-  if (input === "quit") {
-    break;
-  } else if (input === "new") {
-    const newToDo = prompt("Enter new todo");
-    todoList.push(newToDo);
-    console.log(`Added ${newToDo} to list`);
-  } else if (input === "list") {
-    console.log("*****");
-    for (let i = 0; i < todoList.length; i++) {
-      console.log(`${i}: ${todoList[i]}`);
-    }
-    console.log("*****");
-  } else if (input === "delete") {
-    const index = parseInt(prompt("select the index you want to delete"));
-    if (!Number.isNaN(index)) {
-      const deleted = todoList.splice(index, 1);
-      console.log(`Ok, deleted ${deleted}`);
-    } else {
-      console.log("unknown index");
-    }
-  }
+// let todoList = [];
+// let input;
+// while (input !== "quit") {
+//   input = prompt("what would you like to do?");
+//   if (input === "quit") {
+//     break;
+//   } else if (input === "new") {
+//     const newToDo = prompt("Enter new todo");
+//     todoList.push(newToDo);
+//     console.log(`Added ${newToDo} to list`);
+//   } else if (input === "list") {
+//     console.log("*****");
+//     for (let i = 0; i < todoList.length; i++) {
+//       console.log(`${i}: ${todoList[i]}`);
+//     }
+//     console.log("*****");
+//   } else if (input === "delete") {
+//     const index = parseInt(prompt("select the index you want to delete"));
+//     if (!Number.isNaN(index)) {
+//       const deleted = todoList.splice(index, 1);
+//       console.log(`Ok, deleted ${deleted}`);
+//     } else {
+//       console.log("unknown index");
+//     }
+//   }
 
-  // if (input !== "new" || "list" || "delete") {
-  //   input = prompt("wtf? you wanna do what now?");
-  // }
+function greet(firstName) {
+  console.log(`hi, ${firstName}`);
 }
+greet("brock");
