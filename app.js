@@ -353,3 +353,9 @@ function returnDay(num) {
 }
 
 console.log(`${returnDay(9)}`);
+
+const square = function (x) {
+  total = x * x;
+  return total;
+};
+console.log(`${square(2)}`);
