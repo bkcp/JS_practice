@@ -411,3 +411,30 @@ const myMath = {
     return num ** 3;
   },
 };
+
+const cat = {
+  name: "blue",
+  color: "reddish",
+  breed: "scottish fold",
+  meow() {
+    console.log(`${this.name} says meow meow meow`);
+  },
+};
+
+//THIS refers to parent object.
+const hen = {
+  name: "Helen",
+  eggCount: 0,
+  layAnEgg() {
+    return this.eggCount++;
+  },
+};
+
+//TRY & CATCH, reports error without stopping your code from running
+function yell(msg) {
+  try {
+    console.log(msg.toUpperCase().repeat(3));
+  } catch (e) {
+    console.log("please use a string");
+  }
+}
