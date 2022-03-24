@@ -359,3 +359,13 @@ const square = function (x) {
   return total;
 };
 console.log(`${square(2)}`);
+
+function callTwice(func) {
+  func();
+  func();
+}
+function rollDie() {
+  const roll = Math.floor(Math.random() * 6) + 1;
+  console.log(roll);
+}
+callTwice(rollDie);
