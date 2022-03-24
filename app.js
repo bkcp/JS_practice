@@ -325,3 +325,31 @@ function capitalize(str) {
   return newStr;
 }
 console.log(capitalize("brock"));
+
+function sumArray(array) {
+  let sum = 0;
+  for (let each of array) {
+    sum += each;
+  }
+  return sum;
+}
+let addArray = [1, 2, 3, 4, 5];
+console.log(sumArray(addArray));
+
+function returnDay(num) {
+  if (num < 1 || num > 7) {
+    return null;
+  }
+  let days = {
+    1: "monday",
+    2: "tuesday",
+    3: "wednesday",
+    4: "thursday",
+    5: "friday",
+    6: "saturday",
+    7: "sunday",
+  };
+  return days[num];
+}
+
+console.log(`${returnDay(9)}`);
