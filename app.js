@@ -286,7 +286,42 @@ console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
 //     }
 //   }
 
-function greet(firstName) {
-  console.log(`hi, ${firstName}`);
+function greet(firstName, lastName) {
+  console.log(`hi, ${firstName} ${lastName[0]}.`);
 }
-greet("brock");
+greet("brock", "Cooper");
+
+function repeat(str, number) {
+  let result = "";
+  for (let i = 0; i <= number; i++) {
+    result += str;
+  }
+  console.log(result);
+}
+repeat("$", 2);
+
+function add(x, y) {
+  if (typeof x !== "number" || typeof y !== "number") {
+    return false;
+  }
+  let sum = x + y;
+  return sum;
+}
+
+function lastElement(array) {
+  if (array.length == 0) {
+    return null;
+  }
+  let endIndex = array.length - 1;
+  return array[endIndex];
+}
+let testArray = [3, 5, 2, 8, 3];
+console.log(lastElement(testArray));
+
+function capitalize(str) {
+  let firstCap = str[0].toUpperCase();
+
+  let newStr = str.replace(str[0], firstCap);
+  return newStr;
+}
+console.log(capitalize("brock"));
