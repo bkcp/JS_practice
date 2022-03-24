@@ -401,3 +401,13 @@ function isBetween(num) {
 function isBetween2(num) {
   return num <= 50 && num >= 100;
 }
+
+const myMath = {
+  PI: 3.14159,
+  square: function (num) {
+    return num * num;
+  },
+  cube(num) {
+    return num ** 3;
+  },
+};
