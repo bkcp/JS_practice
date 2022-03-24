@@ -286,6 +286,7 @@ console.log(`The average toy cost is ${Math.floor(totals / cost.length)}`);
 //     }
 //   }
 
+//FUNCTIONS and Scope
 function greet(firstName, lastName) {
   console.log(`hi, ${firstName} ${lastName[0]}.`);
 }
@@ -364,8 +365,39 @@ function callTwice(func) {
   func();
   func();
 }
+
+//HIGHER ORDER FUNCTIONS = functions that can receive functions as arguments or return functions.
 function rollDie() {
   const roll = Math.floor(Math.random() * 6) + 1;
   console.log(roll);
 }
 callTwice(rollDie);
+
+function makeMysteryFunc() {
+  const rand = Math.random();
+  if (rand > 0.5) {
+    return function () {
+      console.log("congrats, im a good function!");
+      console.log("you win 1,0000$");
+    };
+  } else {
+    return function () {
+      alert("you will die");
+    };
+  }
+}
+
+function makeBetweenFunc(min, max) {
+  return function (num) {
+    return num >= min && num <= max;
+  };
+}
+
+makeBetweenFunc(5, 10);
+
+function isBetween(num) {
+  return num >= 50 && num <= 100;
+}
+function isBetween2(num) {
+  return num <= 50 && num >= 100;
+}
