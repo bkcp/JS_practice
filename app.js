@@ -439,6 +439,8 @@ function yell(msg) {
   }
 }
 
+//CALLBACKS!!!!!
+
 //ARRAY callback functions
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 
@@ -526,6 +528,7 @@ const meet = (str) => {
 };
 console.log(meet("billy"));
 
+// IMPLICIT RETURN
 //if only one return, dont have to use "return" but instead of curly braces use parenthesis or nothing at all.
 const dieRoll = () => Math.floor(Math.random() * 20) + 1;
 console.log(dieRoll());
@@ -548,3 +551,28 @@ const moviesMap = movies.map((m) => `${m.title} - ${m.score / 10}/10`);
 const moviesForEach = movies.forEach((m) =>
   console.log(`${m.title.toUpperCase()} - ${m.score / 10}/10`)
 );
+
+///TIMEOUT
+
+setTimeout(() => console.log("hello"), 3000);
+setTimeout(() => console.log("I am Skynet"), 4000);
+
+//INTERVALS
+const id = setInterval(() => {
+  console.log(Math.random());
+}, 2000);
+
+setTimeout(() => clearInterval(3), 6000);
+
+//FILTER
+numbers.filter((n) => {
+  return n === 4;
+});
+
+const bestMovies = movies.filter((m) => m.score > 95);
+console.log(`${bestMovies.map((m) => m.title)[0]}`);
+
+const goodMovieTitle = movies
+  .filter((m) => m.score > 95)
+  .map((m) => m.title)[1];
+console.log(goodMovieTitle);
