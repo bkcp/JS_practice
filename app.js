@@ -532,3 +532,19 @@ console.log(dieRoll());
 
 const addition = (a, b) => a + b;
 console.log(addition(3, 4));
+
+console.log(
+  movies.map(function (m) {
+    return `${m.score / 10}`;
+  })
+);
+
+console.log(movies.map((m) => `${m.score / 10}`));
+
+movies.forEach((m) => console.log(`${m.title} - ${m.score / 10} / 10 `));
+
+const moviesMap = movies.map((m) => `${m.title} - ${m.score / 10}/10`);
+
+const moviesForEach = movies.forEach((m) =>
+  console.log(`${m.title.toUpperCase()} - ${m.score / 10}/10`)
+);
