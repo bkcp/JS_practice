@@ -439,7 +439,7 @@ function yell(msg) {
   }
 }
 
-//ARRAY functions
+//ARRAY callback functions
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 
 // function print(element) {
@@ -447,6 +447,7 @@ const numbers = [1, 2, 3, 4, 5, 6, 7];
 // }
 // numbers.forEach(print);
 
+//FOR EACH CALLBACK
 numbers.forEach(function (el) {
   if (el % 2 === 0) {
     console.log(el);
@@ -475,3 +476,24 @@ const movies = [
 movies.forEach(function (el) {
   console.log(`${el.title} - ${el.score} /100`);
 });
+
+//MAP CALLBACK
+const texts = ["hi there", "omg", "i really like you", "thank you "];
+const caps = texts.map(function (txt) {
+  return txt.toUpperCase();
+});
+
+const numberSet = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const dblNum = numberSet.map(function (num) {
+  return num * 2;
+});
+console.log(dblNum);
+
+const movieTitles = movies.map(function (m) {
+  return m.title;
+});
+const movieScores = movies.map(function (m) {
+  return m.score;
+});
+console.log(movieTitles);
+console.log(movieScores);
