@@ -497,3 +497,38 @@ const movieScores = movies.map(function (m) {
 });
 console.log(movieTitles);
 console.log(movieScores);
+
+//ARROW FUNCTIONS
+
+const squareNUM = (x) => {
+  return x * x;
+};
+const addNUM = (x, y) => {
+  return x + y;
+};
+
+console.log(squareNUM(2));
+console.log(addNUM(5, 5));
+
+const rollDICE = () => {
+  return Math.floor(Math.random() * 5) + 1;
+};
+console.log(rollDICE());
+
+//IF only one parameter, parenthesis are optional
+const mulTEN = (x) => {
+  return x * 10;
+};
+console.log(mulTEN(10));
+
+const meet = (str) => {
+  return "Hey" + " " + str + "!";
+};
+console.log(meet("billy"));
+
+//if only one return, dont have to use "return" but instead of curly braces use parenthesis or nothing at all.
+const dieRoll = () => Math.floor(Math.random() * 20) + 1;
+console.log(dieRoll());
+
+const addition = (a, b) => a + b;
+console.log(addition(3, 4));
