@@ -572,7 +572,41 @@ numbers.filter((n) => {
 const bestMovies = movies.filter((m) => m.score > 95);
 console.log(`${bestMovies.map((m) => m.title)[0]}`);
 
+//you can stack map after filter.
 const goodMovieTitle = movies
   .filter((m) => m.score > 95)
   .map((m) => m.title)[1];
 console.log(goodMovieTitle);
+
+const usrNames = [
+  "billy bob thorton",
+  "jim jefferies",
+  "samuel l. jackson",
+  "tommy lee",
+  "chris pine",
+];
+
+const validUserNames = usrNames.filter((n) => n.length < 10);
+console.log(validUserNames);
+
+const shitMovies = function (movies) {
+  const lowScoreMovies = movies.filter(function (m) {
+    return m.score < 80;
+  });
+  return lowScoreMovies.map(function (m) {
+    return m.title;
+  });
+};
+console.log(shitMovies(movies));
+
+//EVERY & SUM Callback: boolean that checks each element against a t/f question
+
+const pets = ["dog", "cat", "bird", "reptile", "mollusk", "marsupial"];
+
+console.log(pets.every((p) => p.length < 2));
+
+pets.every((p) => p[0] === "fish"); //false
+pets.every((p) => p.length > 2); //true
+
+pets.some((p) => p === "dog"); //true
+pets.some((p) => p.length > 14); //false
