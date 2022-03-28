@@ -610,3 +610,58 @@ pets.every((p) => p.length > 2); //true
 
 pets.some((p) => p === "dog"); //true
 pets.some((p) => p.length > 14); //false
+
+//REDUCE CALLBACK; reduces an entire array to a single value depending on our need.
+
+const pricing = [9.99, 199, 39, 4.38, 489.49];
+
+const finalPrice = pricing.reduce((total, price) => {
+  return total + price;
+});
+console.log(finalPrice);
+
+const minPrice = pricing.reduce((min, price) => {
+  if (min < price) {
+    return min;
+  } else {
+    return price;
+  }
+});
+console.log(minPrice);
+
+const maxPrice = pricing.reduce((max, price) => {
+  if (price > max) {
+    return price;
+  }
+  return max;
+});
+console.log(maxPrice);
+
+const bestMovie = movies.reduce((best, movie) => {
+  if (best.score > movie.score) {
+    return best.score;
+  }
+  return movie;
+});
+console.log(bestMovie.title);
+
+//REDUCE can have an initial value to then build upon, it is placed as the second argument
+const evens = [2, 4, 6, 8, 10];
+evens.reduce((sum, num) => sum + num, 100);
+evens.reduce((sum, num) => sum + num, 60);
+evens.reduce((sum, num) => sum + num, 86);
+
+//ARROW FUNCTIONS & keyword THIS
+
+const dude = {
+  fistName: "Bradley",
+  lastName: "Cooper",
+  fullName: () => {
+    return `${this.fistName} ${this.lastName}`;
+  },
+  shoutName: function () {
+    setTimeout(() => {
+      console.log(this.fullName());
+    }, 3000);
+  },
+};
