@@ -675,3 +675,39 @@ function rollaDie(numSides = 20) {
 function helloing(msg = "hello", person = "human") {
   return `${msg}, ${person}!`;
 }
+
+//SPREAD unpacks stuff into individual arguments
+
+const letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
+
+console.log(...letters);
+
+//SPREAD can spread an array into another array, combine and copy
+const oddNums = [1, 3, 5, 7, 9];
+const primeNums = [13, 19, 29, 31];
+
+const allNums = [...oddNums, ...primeNums];
+
+console.log([..."hello"]);
+
+//SPREAD with object literals copy one object into another object
+
+const feline = {
+  legs: 4,
+  family: "Felidae",
+};
+const canine = {
+  legs: 4,
+  family: "Canidae",
+};
+//IF BOTH HAVE SAME KEYS, THE LAST ONE WILL OVERWRITE THE FIRST!!!!
+const catDog = { ...feline, ...canine };
+console.log(catDog);
+
+const dataFromForm = {
+  email: "klj@kj.com",
+  password: "tobias123!",
+  username: "tfunke",
+};
+const updatedData = { ...dataFromForm, id: 234, isAdmin: false };
+console.log(updatedData);
