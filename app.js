@@ -665,3 +665,13 @@ const dude = {
     }, 3000);
   },
 };
+
+//DEFAULT PARAM sets a default param inside the argument
+
+function rollaDie(numSides = 20) {
+  return Math.floor(Math.random() * numSides) + 1;
+}
+
+function helloing(msg = "hello", person = "human") {
+  return `${msg}, ${person}!`;
+}
