@@ -712,8 +712,51 @@ const dataFromForm = {
 const updatedData = { ...dataFromForm, id: 234, isAdmin: false };
 console.log(updatedData);
 
-//REST
-
-function sum() {
-  console.log(arguments);
+//REST like "all the rest of the arguments", creates an array of arguments in a function
+//arguments object is an array of arguments that are given in a function
+function sum(...nums) {
+  return nums.reduce((total, num) => total + num);
 }
+
+function raceResults(gold, silver, ...rest) {
+  console.log(
+    `Gold winner: ${gold}, Sliver winner: ${silver}, and everyone else: ${rest}`
+  );
+}
+
+//DESTRUCTURING . divids array into individual variables. non destructivly
+
+const highScores = [234, 34543, 345654, 3452, 457457, 2345, 5245];
+
+const [gold, silver, bronze, ...rest] = highScores;
+console.log(
+  `gold: ${gold}, silver: ${silver}, bronze: ${bronze}, everyone elses score: ${rest}`
+);
+
+const player = {
+  mail: "lkjlkjkj@ljk.com",
+  pswd: "lkjsdfa",
+  fName: "Harvey",
+  lName: "Daniels",
+  born: 1994,
+  died: 2043,
+  bio: "Harvey Daniels was a good man",
+  city: "San Francisco",
+  state: "California",
+};
+
+const {
+  email,
+  password,
+  fName,
+  lName,
+  born: birthYear,
+  died: deathYear,
+  bio,
+  city,
+  state,
+  favFood = "cheese",
+} = player;
+console.log(
+  `${fName}, was born in ${birthYear}, and his favorite food is ${favFood}`
+);
