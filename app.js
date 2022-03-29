@@ -711,3 +711,9 @@ const dataFromForm = {
 };
 const updatedData = { ...dataFromForm, id: 234, isAdmin: false };
 console.log(updatedData);
+
+//REST
+
+function sum() {
+  console.log(arguments);
+}
