@@ -724,7 +724,7 @@ function raceResults(gold, silver, ...rest) {
   );
 }
 
-//DESTRUCTURING . divids array into individual variables. non destructivly
+//DESTRUCTURING ARRAY. divids array into individual variables. non destructivly
 
 const highScores = [234, 34543, 345654, 3452, 457457, 2345, 5245];
 
@@ -733,6 +733,7 @@ console.log(
   `gold: ${gold}, silver: ${silver}, bronze: ${bronze}, everyone elses score: ${rest}`
 );
 
+//DESTRUCTURING OBJECTS
 const player = {
   mail: "lkjlkjkj@ljk.com",
   pswd: "lkjsdfa",
