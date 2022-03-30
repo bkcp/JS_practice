@@ -747,7 +747,7 @@ const player = {
 
 const {
   email,
-  password,
+  pswd,
   fName,
   lName,
   born: birthYear,
@@ -760,3 +760,23 @@ const {
 console.log(
   `${fName}, was born in ${birthYear}, and his favorite food is ${favFood}`
 );
+
+function theName(player) {
+  const { fName, lName } = player;
+  return `${fName} ${lName}`;
+}
+
+//you can destructure inside the parameter too
+function fulName({ fName, lName }) {
+  return `${fName} ${lName}`;
+}
+
+movies.filter((m) => m.score > 9);
+movies.filter(({ score }) => score > 9);
+
+movies.map((m) => {
+  return `${m.title} - ${m.score}`;
+});
+movies.map(({ title, score, year }) => {
+  return `${title} - scored: ${score}`;
+});
